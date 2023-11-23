@@ -1,4 +1,4 @@
-<div><img src="https://capsule-render.vercel.app/api?type=waving&color=0:99cc99,100:009630&height=200&section=header&text=2023letters&fontSize=90" /></div>
+<div><img src="https://capsule-render.vercel.app/api?type=waving&color=0:99cc99,100:009630&height=200&section=header&text=mind-letters&fontSize=90" /></div>
 
 어흥 올림픽 8팀 프론트 repo입니다.:)
 
