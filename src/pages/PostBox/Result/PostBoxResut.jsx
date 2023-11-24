@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import * as PS from "../style";
 import * as CS from "../Create/style";
 import * as S from "./style";
-import Spinner from "../../../assets/mind-letter-spinner.gif";
+
 import LetterImg from "../../../assets/img/dummy_postcard.png";
 import RefreshIcon from "../../../assets/icons/icon_refresh.png";
 import MindLetterBtnComponent, {
@@ -11,6 +11,7 @@ import MindLetterBtnComponent, {
 import QuestionBtnComponent from "../../../components/common/QuestionBtn";
 import { useNavigate } from "react-router-dom";
 import CustomAlert from "../../../components/common/CustomAlert";
+import Loading from "../../../components/common/Loading";
 function PostBoxResut() {
   // 결과물을 받아서 이미지 생성을 여기서 해야할듯함
   // isLoading
@@ -28,7 +29,7 @@ function PostBoxResut() {
   useEffect(() => {
     setTimeout(() => {
       setIsLoading(false);
-    }, 500);
+    }, 2000);
   }, []);
   // loading 2초 후에 false로 변경
 
@@ -60,10 +61,10 @@ function PostBoxResut() {
       {isLoading ? (
         <>
           {/* 동영상 */}
-          <S.LoadingGif src={Spinner} alt="loading" />;
+          <Loading text={"엽서가 만들어지고 있어요..."} />
+          {/* <S.LoadingGif src={Spinner} alt="loading" />;
           {/* 엽서가 만들어지고 있어요... */}
-          <S.Text>엽서가 만들어지고 있어요...</S.Text>
-          <></>
+          {/* <S.Text>엽서가 만들어지고 있어요...</S.Text> */}
         </>
       ) : (
         <>

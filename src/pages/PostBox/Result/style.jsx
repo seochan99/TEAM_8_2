@@ -94,3 +94,11 @@ export const LetterBox = styled.textarea`
   outline: none;
   z-index: 10;
 `;
+
+export const LetterDoneImg = styled.img`
+  height: 15rem;
+  margin-top: 1rem;
+  margin-bottom: 7rem;
+  flex-shrink: 0;
+  object-fit: cover;
+`;
