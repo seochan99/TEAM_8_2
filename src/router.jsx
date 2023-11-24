@@ -6,6 +6,8 @@ import Login from "./pages/Login/Login";
 import Join from "./pages/Join/Join";
 import Nickname from "./pages/Nickname/Nickname";
 import PostBox from "./pages/PostBox/PostBox";
+import PostBoxCreate from "./pages/PostBox/Create/PostBoxCreate";
+import PostBoxQuestion from "./pages/PostBox/Question/PostBoxQuestion";
 
 const Wrapper = styled.div`
   margin: 0 auto;
@@ -33,11 +35,13 @@ export default function Router() {
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Layout />}>
-          <Route index path="/" element={<Main />} />
-          <Route index path="/login" element={<Login />} />
-          <Route index path="/join" element={<Join />} />
-          <Route index path="/nickname" element={<Nickname />} />
+          <Route index element={<Main />} />
+          <Route path="login" element={<Login />} />
+          <Route path="join" element={<Join />} />
+          <Route path="nickname" element={<Nickname />} />
           <Route path="postbox" element={<PostBox />} />
+          <Route path="postbox/create" element={<PostBoxCreate />} />
+          <Route path="postbox/question" element={<PostBoxQuestion />} />
         </Route>
       </Routes>
     </BrowserRouter>
