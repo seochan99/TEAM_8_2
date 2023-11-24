@@ -62,7 +62,7 @@ export const RefreshIcon = styled.img`
 export const RefreshText = styled.span`
   color: #4c4c4c;
   text-align: center;
-  font-family: esamanru;
+  font-family: "Esamanru";
   font-size: 16px;
   font-style: normal;
   font-weight: 300;
@@ -76,6 +76,7 @@ export const LetterContainer = styled.div`
 
 export const LetterBox = styled.textarea`
   position: absolute;
+  font-family: "Esamanru";
   top: 6%;
   left: 19%;
   width: 55%;
@@ -91,5 +92,5 @@ export const LetterBox = styled.textarea`
   resize: none;
   overflow: hidden;
   outline: none;
-  z-index: 1;
+  z-index: 10;
 `;

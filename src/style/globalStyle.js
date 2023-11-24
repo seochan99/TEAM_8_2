@@ -144,6 +144,21 @@ export const GlobalStyle = createGlobalStyle`
   }
 
   @font-face {
+    font-family: 'Dovemayo_gothic';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2302@1.1/Dovemayo_gothic.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+  font-family: 'Dovemayo_gothic';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2302/OTF/Dovemayo_gothic.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+  
+
+}
+  @font-face {
     font-family: 'EsaManru';
     font-weight: 500;
     font-style: normal;

@@ -38,7 +38,7 @@ const Container = styled.div`
   background: var(--White, #fff);
   /* Card */
   box-shadow: 0px 2px 6px 0px rgba(98, 98, 114, 0.2);
-  z-index: 100;
+  z-index: 1;
 `;
 
 const ButtonContainer = styled.div`
@@ -46,11 +46,12 @@ const ButtonContainer = styled.div`
   flex-direction: row;
   justify-content: center;
   align-items: center;
+  z-index: 1;
 `;
 const Text = styled.p`
   color: var(--Black, #151515);
   text-align: center;
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   font-weight: 500;
   white-space: pre-line;
   line-height: 150%;
@@ -71,7 +72,7 @@ function CustomAlert({ message, onClose, colorCode }) {
         left: 0,
         right: 0,
         bottom: 0,
-        zIndex: 1
+        zIndex: 50
       }}
     >
       <Container>
