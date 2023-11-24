@@ -62,3 +62,16 @@ export const BtnContainer = styled.div`
   z-index: 1;
   gap: 1rem;
 `;
+
+export const Description = styled.div`
+  white-space: pre-wrap;
+  color: #fff;
+  text-align: center;
+  font-family: Pretendard;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  margin-left: 3rem;
+  margin-right: 3rem;
+`;
