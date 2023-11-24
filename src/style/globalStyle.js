@@ -1,5 +1,4 @@
 import { createGlobalStyle } from "styled-components";
-
 export const GlobalStyle = createGlobalStyle`
   :root {
     --vh: 100%;
@@ -24,6 +23,9 @@ export const GlobalStyle = createGlobalStyle`
     vertical-align: baseline;
     font: inherit;
     font-size: 100%;
+
+    // background 설정 
+    
   }
   article, aside, details, figcaption, figure,
   footer, header, hgroup, main, menu, nav, section {
@@ -141,6 +143,21 @@ export const GlobalStyle = createGlobalStyle`
         url('https://cdn.jsdelivr.net/gh/webfontworld/gonggames/EsaManruLight.ttf') format("truetype");
   }
 
+  @font-face {
+    font-family: 'Dovemayo_gothic';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2302@1.1/Dovemayo_gothic.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+  font-family: 'Dovemayo_gothic';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2302/OTF/Dovemayo_gothic.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+  
+
+}
   @font-face {
     font-family: 'EsaManru';
     font-weight: 500;
