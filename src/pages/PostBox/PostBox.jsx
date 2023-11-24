@@ -34,6 +34,14 @@ function PostBox() {
         <br />
         편지 한 장 놓고 가실래요?
         <S.LetterBox></S.LetterBox>
+        {/* yellow button  */}
+        <S.BtnContainer>
+          <S.MindLetterBtn colorCode={"#ffd84d"}>편지 쓰러가기</S.MindLetterBtn>
+          <S.MindLetterBtn colorCode={"#FFFCF5"}>
+            내 우체통 만들기
+          </S.MindLetterBtn>
+        </S.BtnContainer>
+        {/* white button  */}
       </S.Title>
     </S.Root>
   );
