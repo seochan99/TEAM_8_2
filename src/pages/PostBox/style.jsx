@@ -1,6 +1,6 @@
 import { styled } from "styled-components";
 import Bg from "../../assets/img/background-1.png";
-import Lbox from "../../assets/img/letterbox-1.png";
+import Lbox from "../../assets/img/letterbox-full.png";
 import btnYellow from "../../assets/img/btnYellow.png";
 import btnWhite from "../../assets/img/btnWhite.png";
 import btnIdpw from "../../assets/img/btnIDPW.png";
@@ -8,8 +8,8 @@ import btnIdpw from "../../assets/img/btnIDPW.png";
 export const Root = styled.div`
   margin: 0 auto;
   max-width: 430px;
-  width: 100%;
   min-height: 100vh;
+  width: 100%;
   background: url(${Bg}), lightgray 50% / cover no-repeat;
   background-size: 100%;
   display: flex;
@@ -34,4 +34,17 @@ export const Title = styled.div`
   white-space: pre-wrap;
   line-height: normal;
   text-align: center;
+`;
+
+export const LetterBox = styled.div`
+  margin-top: 1.5rem;
+  width: 80%;
+  height: 80vh;
+  background-image: url(${Lbox});
+  background-size: 100%;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 `;

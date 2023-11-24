@@ -33,6 +33,7 @@ function PostBox() {
         {userName}님의 우체통에 방문했어요.
         <br />
         편지 한 장 놓고 가실래요?
+        <S.LetterBox></S.LetterBox>
       </S.Title>
     </S.Root>
   );
