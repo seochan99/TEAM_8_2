@@ -16,11 +16,11 @@ export const Input = styled.input`
 export const Description = styled.div`
   color: #fff;
   text-align: center;
-  margin-top: 12rem;
-  font-size: 1.3rem;
-  font-style: normal;
-  font-weight: 300;
-  line-height: normal;
+  font-family: Pretendard;
+  font-size: 16px;
+
+  font-weight: 400;
+  transform: translateY(-1rem);
 `;
 
 export const Text = styled.span`
@@ -36,4 +36,60 @@ export const Text = styled.span`
 export const LoadingGif = styled.img`
   width: 30%;
   margin: 10rem auto 1rem auto;
+`;
+export const LetterImg = styled.img`
+  width: 70%;
+  margin: 1rem auto 1rem auto;
+`;
+
+export const ResetBtnContainer = styled.div`
+  display: flex;
+  flex-direction: row;
+  border-radius: 10px;
+  border: 0.75px solid #999;
+  background: #fff;
+  justify-content: center;
+  align-items: center;
+  margin-top: 0.75rem;
+  margin-bottom: 1.2rem;
+  padding: 0.2rem 1rem;
+`;
+
+export const RefreshIcon = styled.img`
+  width: 2rem;
+`;
+
+export const RefreshText = styled.span`
+  color: #4c4c4c;
+  text-align: center;
+  font-family: esamanru;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+`;
+
+export const LetterContainer = styled.div`
+  position: relative;
+  display: flex;
+`;
+
+export const LetterBox = styled.textarea`
+  position: absolute;
+  top: 6%;
+  left: 19%;
+  width: 55%;
+  min-height: 25rem;
+  background: #fff;
+  border-radius: 10px;
+  border: none;
+  padding: 1rem 1rem;
+  font-family: Pretendard;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: normal;
+  resize: none;
+  overflow: hidden;
+  outline: none;
+  z-index: 1;
 `;
