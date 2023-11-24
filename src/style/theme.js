@@ -1,19 +1,12 @@
 import { css } from "styled-components";
 
 const colors = {
-    primary1: "#FF5D47",
-    primary2: "#7230FF",
-    sub1: "#FFF3F1",
-    sub2: "#F1EAFF",
-    white: "#FFFFFF",
-    gray1: "#F8F8FA",
-    gray2: "#EEEFF3",
-    gray3: "#DEDFE5",
-    gray4: "#AEAFB9",
-    gray5: "#606067",
-    gray6: "#E4E4E4",
-    gray7: "#E2E2E2",
-    black: "#282828",
+  red: "#F61930",
+  yellow: "#FFD84D",
+  cream: "#FFEBAD",
+  ivory: "#FFFCF5",
+  white: "#FFFFFF",
+  black: "#000000",
 };
 
 
@@ -23,7 +16,7 @@ function FONT({ weight, size, lineHeight }) {
     font-weight : ${weight};
     font-size : ${size}px;
     line-height : ${lineHeight}px;
-    `;
+  `;
 }
 
 const fonts = {
@@ -50,54 +43,6 @@ const fonts = {
     font-family: "Pretendard";
     font-style: normal;
     font-weight: 900;
-    letter-spacing: 20;
-  `,
-  KCCEunyoung: css`
-    font-family: "KCC-eunyoung";
-    font-style: normal;
-    font-weight: 500;
-    letter-spacing: 20;
-  `,
-  GmarketSansMedium: css`
-    font-family: "GmarketSansMedium";
-    font-style: normal;
-    font-weight: 500;
-    letter-spacing: 20;
-  `,
-  SCoreDream1: css`
-    font-family: "S-CoreDream-3Light";
-    font-style: normal;
-    font-weight: 200;
-    letter-spacing: 20;
-  `,
-  SCoreDream2: css`
-    font-family: "S-CoreDream-3Light";
-    font-style: normal;
-    font-weight: 300;
-    letter-spacing: 20;
-  `,
-  SCoreDream3: css`
-    font-family: "S-CoreDream-3Light";
-    font-style: normal;
-    font-weight: 400;
-    letter-spacing: 20;
-  `,
-  SCoreDream4: css`
-    font-family: "S-CoreDream-3Light";
-    font-style: normal;
-    font-weight: 500;
-    letter-spacing: 20;
-  `,
-  SCoreDream5: css`
-    font-family: "S-CoreDream-3Light";
-    font-style: normal;
-    font-weight: 600;
-    letter-spacing: 20;
-  `,
-  SCoreDream6: css`
-    font-family: "S-CoreDream-3Light";
-    font-style: normal;
-    font-weight: 700;
     letter-spacing: 20;
   `,
 };
