@@ -8,6 +8,7 @@ import Nickname from "./pages/Nickname/Nickname";
 import PostBox from "./pages/PostBox/PostBox";
 import PostBoxCreate from "./pages/PostBox/Create/PostBoxCreate";
 import PostBoxQuestion from "./pages/PostBox/Question/PostBoxQuestion";
+import PostBoxResut from "./pages/PostBox/Result/PostBoxResut";
 
 const Wrapper = styled.div`
   margin: 0 auto;
@@ -42,6 +43,7 @@ export default function Router() {
           <Route path="postbox" element={<PostBox />} />
           <Route path="postbox/create" element={<PostBoxCreate />} />
           <Route path="postbox/question" element={<PostBoxQuestion />} />
+          <Route path="postbox/result" element={<PostBoxResut />} />
         </Route>
       </Routes>
     </BrowserRouter>
