@@ -94,20 +94,22 @@ function PostBoxResut() {
           </S.LetterContainer>
 
           {!letterOn ? (
-            <S.ResetBtnContainer>
-              <S.RefreshIcon src={RefreshIcon}></S.RefreshIcon>
-              <S.RefreshText
-                onClick={() => {
-                  // 새로고침
-                  // 1. 이미지 API 다시 불러오기
-                  // 2. 로딩창 띄우기
-                  // 3. 로딩창 2초 후에 false로 변경
-                  // 4. 엽서 이미지 띄우기
-                }}
-              >
-                새로고침
-              </S.RefreshText>
-            </S.ResetBtnContainer>
+            <>
+              <S.ResetBtnContainer>
+                <S.RefreshIcon src={RefreshIcon}></S.RefreshIcon>
+                <S.RefreshText
+                  onClick={() => {
+                    // 새로고침
+                    // 1. 이미지 API 다시 불러오기
+                    // 2. 로딩창 띄우기
+                    // 3. 로딩창 2초 후에 false로 변경
+                    // 4. 엽서 이미지 띄우기
+                  }}
+                >
+                  새로고침
+                </S.RefreshText>
+              </S.ResetBtnContainer>
+            </>
           ) : (
             <div
               style={{

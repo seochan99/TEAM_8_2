@@ -6,8 +6,16 @@ import CustomAlert from "../../../components/common/CustomAlert";
 import { useNavigate } from "react-router-dom";
 
 function PostBoxQuestion() {
-  const [questionSetep, setQuestionStep] = useState(0);
+  const [questionSetep, setQuestionStep] = useState(5);
   const [showAlert, setShowAlert] = useState(false);
+  const [selectedMood, setSelectedMood] = useState("");
+
+  const handleMoodClick = mood => {
+    setSelectedMood(mood);
+    question[questionSetep].answer = mood;
+    console.log(question[questionSetep].answer);
+  };
+
   const [question, setQuestion] = useState([
     {
       question: "어떤 이름으로 엽서를 보낼까요?",
@@ -89,17 +97,45 @@ function PostBoxQuestion() {
       {/* ------------- 내용물 -------------*/}
       <S.Description>{question[questionSetep].question}</S.Description>
       {/* ------------- 입력 -------------*/}
-      <S.Input
-        value={question[questionSetep].answer}
-        placeholder={question[questionSetep].palceholderText}
-        onChange={e => {
-          setQuestion(questions =>
-            questions.map((q, index) =>
-              index === questionSetep ? { ...q, answer: e.target.value } : q
-            )
-          );
-        }}
-      />
+      {questionSetep === 5 ? (
+        <S.MoodBtnContainer>
+          {/* 선택 받기
+        심플한, 귀여운, 사실적인 */}
+          <S.MoodBtn
+            onClick={() => handleMoodClick("심플한")}
+            isSelected={selectedMood === "심플한"}
+          >
+            심플한
+          </S.MoodBtn>
+          <S.MoodBtn
+            onClick={() => handleMoodClick("귀여운")}
+            isSelected={selectedMood === "귀여운"}
+          >
+            귀여운
+          </S.MoodBtn>
+          <S.MoodBtn
+            onClick={() => handleMoodClick("사실적인")}
+            isSelected={selectedMood === "사실적인"}
+          >
+            사실적인
+          </S.MoodBtn>
+        </S.MoodBtnContainer>
+      ) : (
+        <>
+          <S.Input
+            value={question[questionSetep].answer}
+            placeholder={question[questionSetep].palceholderText}
+            onChange={e => {
+              setQuestion(questions =>
+                questions.map((q, index) =>
+                  index === questionSetep ? { ...q, answer: e.target.value } : q
+                )
+              );
+            }}
+          />
+        </>
+      )}
+
       {/* ------------- 버튼 -------------*/}
       <QuestionBtnComponent
         colorCode={"#ffd84d"}
