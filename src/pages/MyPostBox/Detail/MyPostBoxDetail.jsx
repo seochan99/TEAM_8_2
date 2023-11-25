@@ -3,10 +3,11 @@ import * as PS from "../style";
 import React, { useEffect, useState } from "react";
 import DummyImg from "../../../assets/img/letter_done.png";
 import { useNavigate } from "react-router-dom";
+import Loading from "../../../components/common/Loading";
 
 function MyPostBoxDetail() {
   const [letterList, setLetterList] = useState([]);
-
+  const [isLoading, setIsLoading] = useState(true);
   const [userName, setUserName] = useState("chan");
   const navigate = useNavigate();
 
@@ -39,26 +40,38 @@ function MyPostBoxDetail() {
         letterImage: DummyImg
       }
     ];
+
     setLetterList(data);
+    setIsLoading(false);
   }, []);
 
   return (
     <PS.Root>
-      <S.Title>{userName}님의 우체통</S.Title>
-      <S.Description>내 편지를 구경해보아요!</S.Description>
-      <S.PostWrapper>
-        {letterList.map((letter, index) => (
-          <S.PostContainer key={index}>
-            <S.PostImg
-              src={letter.letterImage}
-              onClick={() => {
-                goDetailPage(letter.id);
-              }}
-            />
-            <S.PostTitle>From.{letter.sender}</S.PostTitle>
-          </S.PostContainer>
-        ))}
-      </S.PostWrapper>
+      {isLoading ? (
+        <>
+          <Loading text={"편지를 불러오고 있어요..."} />
+        </>
+      ) : (
+        <>
+          <S.Title>{userName}님의 우체통</S.Title>
+          <S.Description>
+            총 {letterList.length}통의 편지를 받았어요!
+          </S.Description>
+          <S.PostWrapper>
+            {letterList.map((letter, index) => (
+              <S.PostContainer key={index}>
+                <S.PostImg
+                  src={letter.letterImage}
+                  onClick={() => {
+                    goDetailPage(letter.id);
+                  }}
+                />
+                <S.PostTitle>From.{letter.sender}</S.PostTitle>
+              </S.PostContainer>
+            ))}
+          </S.PostWrapper>
+        </>
+      )}
     </PS.Root>
   );
 }

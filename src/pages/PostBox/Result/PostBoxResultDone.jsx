@@ -5,8 +5,20 @@ import * as S from "./style";
 import { useNavigate } from "react-router-dom";
 import Loading from "../../../components/common/Loading";
 import LetterDoneImg from "../../../assets/img/letter_done.png";
+import EnvelopImg_1 from "../../../assets/img/envelop/green.png";
+import EnvelopImg_2 from "../../../assets/img/envelop/red.png";
+import EnvelopImg_3 from "../../../assets/img/envelop/purple.png";
+import EnvelopImg_4 from "../../../assets/img/envelop/yellow.png";
 import MindLetterBtnComponent from "../../../components/common/MindLetterBtn";
 import CustomAlert from "../../../components/common/CustomAlert";
+
+const envelopImages = [EnvelopImg_1, EnvelopImg_2, EnvelopImg_3, EnvelopImg_4];
+
+function getRandomImage(images) {
+  const randomIndex = Math.floor(Math.random() * images.length);
+  return images[randomIndex];
+}
+
 function PostBoxResultDone() {
   const [isLoading, setIsLoading] = useState(true);
   const [text, setText] = useState("");
@@ -14,11 +26,15 @@ function PostBoxResultDone() {
   const [userName] = useState("chan");
 
   const [showAlert, setShowAlert] = useState(false);
+  const [envelopImage, setEnvelopImage] = useState(null);
 
   // navigate
   const navigate = useNavigate();
 
   useEffect(() => {
+    const randomEnvelopImage = getRandomImage(envelopImages);
+    setEnvelopImage(randomEnvelopImage);
+
     setTimeout(() => {
       setIsLoading(false);
     }, 2000);
@@ -47,6 +63,8 @@ function PostBoxResultDone() {
             {" "}
             {userName}님에게 무사히 전달됐어요!
           </CS.Title>
+          {/* {envelopImage && <S.LetterDoneImg src={envelopImage} alt="Envelop" />} */}
+
           <S.LetterDoneImg src={LetterDoneImg} />
           <MindLetterBtnComponent
             colorCode={"#ffd84d"}

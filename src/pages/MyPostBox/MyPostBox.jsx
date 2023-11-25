@@ -13,9 +13,9 @@ function MyPostBox() {
   //   const { username } = useParams();
   const [userName, setUserName] = useState("chan");
 
-  // 나중에 query로 유저 정보 가져와서 저장
+  // const [isLoading, setIsLoading] = useState(true);
+  // // 나중에 query로 유저 정보 가져와서 저장
   //   useEffect(() => {
-  //     first;
 
   //     return () => {
   //       second;

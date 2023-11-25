@@ -40,7 +40,7 @@ export const Title = styled.div`
 
 export const LetterBox = styled.div`
   position: absolute;
-  margin-top: 8rem;
+  margin-top: 4rem;
   transform: translateY(4rem);
   width: 70%;
   min-height: 40rem;

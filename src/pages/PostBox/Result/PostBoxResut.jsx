@@ -83,9 +83,7 @@ function PostBoxResut() {
           {!letterOn ? (
             <>
               <CS.Title>엽서가 만들어졌어요!</CS.Title>
-              <S.Description>
-                마음에 안드시나요? 새로고침을 해보아요!
-              </S.Description>
+              <S.Description>엽서 뒷편에 편지를 작성해보아요!</S.Description>
             </>
           ) : (
             <>
