@@ -50,7 +50,8 @@ function PostBoxResut() {
         letterRequestDto: {
           answer: promptingText,
           content: text,
-          writer: nickname
+          writer: nickname,
+          image: imgUrl
         }
       };
       const UUID = "13eaafc6-bba1-4382-8021-109f58d8e167";

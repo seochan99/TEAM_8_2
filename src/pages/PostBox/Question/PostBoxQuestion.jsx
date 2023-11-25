@@ -57,9 +57,13 @@ function PostBoxQuestion() {
 
   const navigate = useNavigate();
 
+  // uuid reccoil에서 불러오기
+
   const fetchData = async promptingText => {
     try {
-      const response = await axios.post(`/letter/karlo`, {
+      // 임시 uuid전송
+      const UUID = "13eaafc6-bba1-4382-8021-109f58d8e167";
+      const response = await axios.post(`/image/${UUID}`, {
         promptKOR: promptingText
       });
       console.log(response);

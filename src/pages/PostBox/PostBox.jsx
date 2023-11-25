@@ -7,18 +7,24 @@ import MindLetterBtnComponent from "../../components/common/MindLetterBtn";
 function PostBox() {
   const navigate = useNavigate();
   // location username=uuid 값을 가지고와서 변수에 저장
-  //   const location = useLocation();
-  //   const { username } = useParams();
-  const [userName, setUserName] = useState("chan");
+  const location = useLocation();
+  const { username } = useParams();
+  const [userInf, setUserInf] = useState({
+    userName: "",
+    letterBox: "String" // image....
+  });
 
   // 나중에 query로 유저 정보 가져와서 저장
-  //   useEffect(() => {
-  //     first;
-
-  //     return () => {
-  //       second;
-  //     };
-  //   }, [third]);
+  // 유저 이름이랑 posterbodx setting
+  useEffect(() => {
+    const data = {
+      userName: "chan",
+      letterBox: "String" // image....
+    };
+    return () => {
+      second;
+    };
+  }, [third]);
 
   const [post, setPost] = useState({
     title: "",
