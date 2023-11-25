@@ -119,7 +119,7 @@ import shape6pink from "../../assets/decoLib/shape6/pink.png";
 import shape6purple from "../../assets/decoLib/shape6/purple.png";
 import shape6red from "../../assets/decoLib/shape6/red.png";
 import shape6skyblue from "../../assets/decoLib/shape6/sky-blue.png";
-import shape6white from "../../assets/decoLib/shape6/White.png";
+import shape6white from "../../assets/decoLib/shape6/white.png";
 import shape6yellow from "../../assets/decoLib/shape6/yellow.png";
 
 export default function Deco() {
