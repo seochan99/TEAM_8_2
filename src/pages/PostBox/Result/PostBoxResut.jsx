@@ -23,8 +23,7 @@ function PostBoxResut() {
   // alert
   const [showAlert, setShowAlert] = useState(false);
   const location = useLocation();
-  const { nickname, answerList, promptingText } = location.state;
-
+  const { nickname, answerList, promptingText, imgUrl } = location.state;
   // navigate
   const navigate = useNavigate();
 
@@ -33,7 +32,7 @@ function PostBoxResut() {
   useEffect(() => {
     setTimeout(() => {
       setIsLoading(false);
-    }, 2000);
+    }, 5000);
   }, []);
   // loading 2초 후에 false로 변경
 
@@ -92,7 +91,7 @@ function PostBoxResut() {
           )}
 
           <S.LetterContainer>
-            <S.LetterImg src={LetterImg} />
+            <S.LetterImg src={imgUrl ?? LetterImg} />
             {letterOn && (
               <S.LetterBox
                 onChange={e => {
