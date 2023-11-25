@@ -10,32 +10,32 @@ function PostBoxQuestion() {
   const [showAlert, setShowAlert] = useState(false);
   const [question, setQuestion] = useState([
     {
-      questionNum: "Q1",
-      question: "당신은 이 사람에게 어떤 존재인가요?",
+      question: "어떤 이름으로 엽서를 보낼까요?",
+      answer: "",
+      palceholderText: "나의 이름은.."
+    },
+    {
+      question: "기억에 남는 장소는 어딘가요?",
+      answer: "",
+      palceholderText: "장소는..."
+    },
+    {
+      question: "그 장소의 날씨는 어땠나요?",
+      answer: "",
+      palceholderText: "날씨는..."
+    },
+    {
+      question: "그 날 거기서 무엇을 했나요?",
+      answer: "",
+      palceholderText: "저희는.."
+    },
+    {
+      question: "받는이를 생각하면 떠오르는 게 있나요?",
       answer: "",
       palceholderText: "나에게 이 사람은..."
     },
     {
-      questionNum: "Q2",
-      question: "당신은 이 사람에게 어떤 존재인가요?",
-      answer: "",
-      palceholderText: "나에게 이 사람은..."
-    },
-    {
-      questionNum: "Q3",
-      question: "당신은 이 사람에게 어떤 존재인가요?",
-      answer: "",
-      palceholderText: "나에게 이 사람은..."
-    },
-    {
-      questionNum: "Q4",
-      question: "당신은 이 사람에게 어떤 존재인가요?",
-      answer: "",
-      palceholderText: "나에게 이 사람은..."
-    },
-    {
-      questionNum: "Q5",
-      question: "당신은 이 사람에게 어떤 존재인가요?",
+      question: "원하는 엽서의 분위기가 있나요?",
       answer: "",
       palceholderText: "나에게 이 사람은..."
     }
@@ -82,12 +82,12 @@ function PostBoxQuestion() {
           }}
         />
       )}
-
+      {/* ------------- 질문 단계 -------------*/}
+      <S.QuestionStep>
+        {questionSetep}/{question.length - 1}
+      </S.QuestionStep>
       {/* ------------- 내용물 -------------*/}
-      <S.Description>
-        {question[questionSetep].questionNum}.{" "}
-        {question[questionSetep].question}
-      </S.Description>
+      <S.Description>{question[questionSetep].question}</S.Description>
       {/* ------------- 입력 -------------*/}
       <S.Input
         value={question[questionSetep].answer}

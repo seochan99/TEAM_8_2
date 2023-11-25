@@ -6,6 +6,7 @@ import btnWhite from "../../assets/img/btnWhite.png";
 import btnIdpw from "../../assets/img/btnIDPW.png";
 
 export const Root = styled.div`
+  padding-bottom: 3rem;
   position: relative;
   margin: 0 auto;
   max-width: 430px;
@@ -42,8 +43,8 @@ export const LetterBox = styled.div`
 
   margin-top: 1.5rem;
   transform: translateY(4rem);
-  width: 70%;
-  min-height: 40rem;
+  width: 60%;
+  min-height: 33rem;
 
   background-image: url(${Lbox});
   background-size: 100%;

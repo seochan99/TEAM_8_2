@@ -10,7 +10,11 @@ function PostBoxCreate() {
   const navigate = useNavigate();
 
   return (
-    <PS.Root>
+    <PS.Root
+      style={{
+        paddingBottom: "3rem"
+      }}
+    >
       <S.Title>
         질문에 답하면 <br />
         어울리는 엽서를 만들어드려요.

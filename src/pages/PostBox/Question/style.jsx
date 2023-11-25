@@ -12,12 +12,22 @@ export const Input = styled.input`
   font-size: 16px;
   font-weight: 400;
 `;
+export const QuestionStep = styled.div`
+  margin-top: 7rem;
+  font-family: "Esamanru";
+  color: #fff;
+  text-align: center;
+  font-size: 1rem;
+  font-weight: 300;
+  font-style: normal;
+  line-height: normal;
+`;
 
 export const Description = styled.div`
   color: #fff;
   text-align: center;
-
-  margin-top: 12rem;
+  font-family: "Esamanru";
+  margin-top: 1rem;
   font-size: 1.3rem;
   font-style: normal;
   font-weight: 300;

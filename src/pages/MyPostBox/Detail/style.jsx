@@ -1,57 +1,19 @@
 import { styled, css } from "styled-components";
-import Bg from "../../assets/img/background-1.png";
-import Lbox from "../../assets/img/letterbox-full.png";
-import btnYellow from "../../assets/img/btnYellow.png";
-import btnWhite from "../../assets/img/btnWhite.png";
-import btnIdpw from "../../assets/img/btnIDPW.png";
-
-export const Root = styled.div`
-  position: relative;
-  margin: 0 auto;
-  max-width: 430px;
-  min-height: 100vh;
-  width: 100%;
-  background: url(${Bg}), lightgray 50% / cover no-repeat;
-  background-size: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  color: black;
-`;
 
 export const LogoImage = styled.img`
   width: 16%;
   margin: 5rem auto 48px auto;
 `;
 export const Title = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   font-family: "Esamanru";
-  font-weight: 500; // semi-boldr가 있어야할거같음
-  font-size: 1.5rem;
-  color: white;
-  margin-bottom: 66px;
-  white-space: pre-wrap;
-  line-height: normal;
+  color: #fff;
   text-align: center;
-`;
-
-export const LetterBox = styled.div`
-  position: absolute;
-
-  margin-top: 1.5rem;
-  transform: translateY(4rem);
-  width: 70%;
-  min-height: 40rem;
-
-  background-image: url(${Lbox});
-  background-size: 100%;
-  background-repeat: no-repeat;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  font-size: 1.5rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  margin-top: 5rem;
+  margin-bottom: 2rem;
 `;
 
 export const BtnContainer = styled.div`
@@ -64,14 +26,41 @@ export const BtnContainer = styled.div`
 `;
 
 export const Description = styled.div`
-  white-space: pre-wrap;
   color: #fff;
   text-align: center;
   font-family: Pretendard;
-  font-size: 1rem;
-  font-style: normal;
+  font-size: 16px;
+
   font-weight: 400;
+  transform: translateY(-1rem);
+`;
+
+export const PostWrapper = styled.div`
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); // This sets two columns per row
+  column-gap: 0cap.5; // Add some gap between the columns
+  row-gap: 1rem; // Add some gap between the rows
+  padding: 0 1rem;
+`;
+
+export const PostContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+`;
+export const PostImg = styled.img`
+  width: 85%;
+  cursor: pointer;
+`;
+
+export const PostTitle = styled.div`
+  font-family: "Esamanru";
+  color: #fff;
+  margin-top: 1rem;
+  text-align: center;
+  font-family: esamanru;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 300;
   line-height: normal;
-  margin-left: 3rem;
-  margin-right: 3rem;
 `;
