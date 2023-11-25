@@ -78,16 +78,16 @@ export default function Login() {
           ></S.Input>
         </S.LoginBox>
       </S.InputWrapper>
-        <S.ButtonWrapper>
-          <S.Button onClick={(e) => login(e)}>
-            로그인
+      <S.ButtonWrapper>
+        <S.Button onClick={(e) => login(e)}>
+          로그인
+        </S.Button>
+        <Link to="/join">
+          <S.Button $white="true">
+            회원가입
           </S.Button>
-          <Link to="/join">
-            <S.Button white>
-              회원가입
-            </S.Button>
-          </Link>
-        </S.ButtonWrapper>
+        </Link>
+      </S.ButtonWrapper>
     </S.Root>
   )
 }

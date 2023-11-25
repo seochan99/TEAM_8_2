@@ -5,6 +5,7 @@ import Main from "./pages/main/Main";
 import Login from "./pages/Login/Login";
 import Join from "./pages/Join/Join";
 import Nickname from "./pages/Nickname/Nickname";
+import Deco from "./pages/Deco/Deco";
 
 const Wrapper = styled.div`
 	margin: 0 auto;
@@ -37,6 +38,7 @@ export default function Router() {
 					<Route index path="/login" element={<Login />} />
 					<Route index path="/join" element={<Join />} />
 					<Route index path="/nickname" element={<Nickname />} />
+					<Route index path="/deco" element={<Deco />} />
 				</Route>
 			</Routes>
 		</BrowserRouter>
