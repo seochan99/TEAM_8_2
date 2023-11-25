@@ -77,10 +77,10 @@ export const LetterContainer = styled.div`
 export const LetterBox = styled.textarea`
   position: absolute;
   font-family: "Esamanru";
-  top: 6%;
+  top: 7%;
   left: 19%;
   width: 55%;
-  min-height: 25rem;
+  min-height: 14rem;
   background: #fff;
   border-radius: 10px;
   border: none;

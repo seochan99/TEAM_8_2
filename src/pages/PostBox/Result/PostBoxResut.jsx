@@ -12,6 +12,7 @@ import QuestionBtnComponent from "../../../components/common/QuestionBtn";
 import { useLocation, useNavigate } from "react-router-dom";
 import CustomAlert from "../../../components/common/CustomAlert";
 import Loading from "../../../components/common/Loading";
+import axios from "axios";
 function PostBoxResut() {
   // 결과물을 받아서 이미지 생성을 여기서 해야할듯함
   // isLoading
@@ -36,19 +37,25 @@ function PostBoxResut() {
   }, []);
   // loading 2초 후에 false로 변경
 
-  const SubmitHandler = () => {
+  const SubmitHandler = async () => {
     if (letterOn) {
+      // text가 비었으면 alert하고 반려
       if (text === "") {
         setShowAlert(true);
         return;
       }
+
+      // 내용물 생성
       const content = {
-        nickname: nickname,
-        answerList: answerList,
-        letter: text,
-        promptingText: promptingText
+        letterRequestDto: {
+          answer: promptingText,
+          content: text,
+          writer: nickname
+        }
       };
-      console.log(content);
+      const UUID = "13eaafc6-bba1-4382-8021-109f58d8e167";
+      const response = await axios.post(`/letter/${UUID}`, content);
+      console.log(response);
 
       // 글도 채워져있다면
       navigate("/postbox/result/done");
