@@ -9,7 +9,7 @@ import MindLetterBtnComponent, {
   MindLetterBtn
 } from "../../../components/common/MindLetterBtn";
 import QuestionBtnComponent from "../../../components/common/QuestionBtn";
-import { useNavigate } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 import CustomAlert from "../../../components/common/CustomAlert";
 import Loading from "../../../components/common/Loading";
 function PostBoxResut() {
@@ -22,9 +22,13 @@ function PostBoxResut() {
 
   // alert
   const [showAlert, setShowAlert] = useState(false);
+  const location = useLocation();
+  const { nickname, answerList, promptingText } = location.state;
 
   // navigate
   const navigate = useNavigate();
+
+  // navigate stete받아쓰기
 
   useEffect(() => {
     setTimeout(() => {
@@ -39,6 +43,14 @@ function PostBoxResut() {
         setShowAlert(true);
         return;
       }
+      const content = {
+        nickname: nickname,
+        answerList: answerList,
+        letter: text,
+        promptingText: promptingText
+      };
+      console.log(content);
+
       // 글도 채워져있다면
       navigate("/postbox/result/done");
     } else {
@@ -94,20 +106,22 @@ function PostBoxResut() {
           </S.LetterContainer>
 
           {!letterOn ? (
-            <S.ResetBtnContainer>
-              <S.RefreshIcon src={RefreshIcon}></S.RefreshIcon>
-              <S.RefreshText
-                onClick={() => {
-                  // 새로고침
-                  // 1. 이미지 API 다시 불러오기
-                  // 2. 로딩창 띄우기
-                  // 3. 로딩창 2초 후에 false로 변경
-                  // 4. 엽서 이미지 띄우기
-                }}
-              >
-                새로고침
-              </S.RefreshText>
-            </S.ResetBtnContainer>
+            <>
+              {/* <S.ResetBtnContainer>
+                <S.RefreshIcon src={RefreshIcon}></S.RefreshIcon>
+                <S.RefreshText
+                  onClick={() => {
+                    // 새로고침
+                    // 1. 이미지 API 다시 불러오기
+                    // 2. 로딩창 띄우기
+                    // 3. 로딩창 2초 후에 false로 변경
+                    // 4. 엽서 이미지 띄우기
+                  }}
+                >
+                  새로고침
+                </S.RefreshText>
+              </S.ResetBtnContainer> */}
+            </>
           ) : (
             <div
               style={{

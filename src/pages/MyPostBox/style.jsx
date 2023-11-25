@@ -6,7 +6,6 @@ import btnWhite from "../../assets/img/btnWhite.png";
 import btnIdpw from "../../assets/img/btnIDPW.png";
 
 export const Root = styled.div`
-  padding-bottom: 3rem;
   position: relative;
   margin: 0 auto;
   max-width: 430px;
@@ -18,7 +17,6 @@ export const Root = styled.div`
   flex-direction: column;
   align-items: center;
   color: black;
-  padding-bottom: 3rem;
 `;
 
 export const LogoImage = styled.img`
@@ -33,7 +31,8 @@ export const Title = styled.div`
   font-weight: 500; // semi-boldr가 있어야할거같음
   font-size: 1.5rem;
   color: white;
-  margin-bottom: 66px;
+  margin-top: 7rem;
+  margin-bottom: 10rem;
   white-space: pre-wrap;
   line-height: normal;
   text-align: center;
@@ -41,12 +40,10 @@ export const Title = styled.div`
 
 export const LetterBox = styled.div`
   position: absolute;
-
-  margin-top: 1.5rem;
+  margin-top: 8rem;
   transform: translateY(4rem);
-  width: 60%;
-  min-height: 33rem;
-
+  width: 70%;
+  min-height: 40rem;
   background-image: url(${Lbox});
   background-size: 100%;
   background-repeat: no-repeat;
@@ -60,7 +57,7 @@ export const BtnContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 24rem;
+  margin-top: 35rem;
   z-index: 1;
   gap: 1rem;
 `;
