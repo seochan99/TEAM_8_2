@@ -10,7 +10,8 @@ export const Root = styled.div`
 	max-width: 430px;
 	width: 100%;
 	min-height: 100vh;
-	background: url(${Bg}), lightgray 50% / cover no-repeat;
+	background: url(${Bg});
+  background-repeat: no-repeat;
   background-size: 100%;
 	display: flex;
 	flex-direction: column;

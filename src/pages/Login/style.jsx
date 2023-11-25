@@ -10,7 +10,8 @@ export const Root = styled.div`
 	max-width: 430px;
 	width: 100%;
 	min-height: 100vh;
-	background: url(${Bg}), lightgray 50% / cover no-repeat;
+	background: url(${Bg});
+  background-repeat: no-repeat;
   background-size: 100%;
 	display: flex;
 	flex-direction: column;
@@ -78,7 +79,7 @@ export const Button = styled.button`
   height: 51px;
   border: none;
   border-radius: 100px;
-  background-image: url(${(props) => props.white ? btnWhite : btnYellow});
+  background-image: url(${(props) => props.$white ? btnWhite : btnYellow});
   background-size: 100%;
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
   font-family: 'Esamanru';
