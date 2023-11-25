@@ -39,7 +39,7 @@ import shape1pink from "../../assets/decoLib/shape1/pink.png";
 import shape1purple from "../../assets/decoLib/shape1/purple.png";
 import shape1red from "../../assets/decoLib/shape1/red.png";
 import shape1skyblue from "../../assets/decoLib/shape1/sky-blue.png";
-import shape1white from "../../assets/decoLib/shape1/White.png";
+import shape1white from "../../assets/decoLib/shape1/white.png";
 import shape1yellow from "../../assets/decoLib/shape1/yellow.png";
 
 import shape2beige from "../../assets/decoLib/shape2/beige.png";
@@ -55,7 +55,7 @@ import shape2pink from "../../assets/decoLib/shape2/pink.png";
 import shape2purple from "../../assets/decoLib/shape2/purple.png";
 import shape2red from "../../assets/decoLib/shape2/red.png";
 import shape2skyblue from "../../assets/decoLib/shape2/sky-blue.png";
-import shape2white from "../../assets/decoLib/shape2/White.png";
+import shape2white from "../../assets/decoLib/shape2/white.png";
 import shape2yellow from "../../assets/decoLib/shape2/yellow.png";
 
 import shape3beige from "../../assets/decoLib/shape3/beige.png";
@@ -71,7 +71,7 @@ import shape3pink from "../../assets/decoLib/shape3/pink.png";
 import shape3purple from "../../assets/decoLib/shape3/purple.png";
 import shape3red from "../../assets/decoLib/shape3/red.png";
 import shape3skyblue from "../../assets/decoLib/shape3/sky-blue.png";
-import shape3white from "../../assets/decoLib/shape3/White.png";
+import shape3white from "../../assets/decoLib/shape3/white.png";
 import shape3yellow from "../../assets/decoLib/shape3/yellow.png";
 
 import shape4beige from "../../assets/decoLib/shape4/beige.png";
@@ -87,7 +87,7 @@ import shape4pink from "../../assets/decoLib/shape4/pink.png";
 import shape4purple from "../../assets/decoLib/shape4/purple.png";
 import shape4red from "../../assets/decoLib/shape4/red.png";
 import shape4skyblue from "../../assets/decoLib/shape4/sky-blue.png";
-import shape4white from "../../assets/decoLib/shape4/White.png";
+import shape4white from "../../assets/decoLib/shape4/white.png";
 import shape4yellow from "../../assets/decoLib/shape4/yellow.png";
 
 import shape5beige from "../../assets/decoLib/shape5/beige.png";
@@ -103,7 +103,7 @@ import shape5pink from "../../assets/decoLib/shape5/pink.png";
 import shape5purple from "../../assets/decoLib/shape5/purple.png";
 import shape5red from "../../assets/decoLib/shape5/red.png";
 import shape5skyblue from "../../assets/decoLib/shape5/sky-blue.png";
-import shape5white from "../../assets/decoLib/shape5/White.png";
+import shape5white from "../../assets/decoLib/shape5/white.png";
 import shape5yellow from "../../assets/decoLib/shape5/yellow.png";
 
 import shape6beige from "../../assets/decoLib/shape6/beige.png";
@@ -119,7 +119,7 @@ import shape6pink from "../../assets/decoLib/shape6/pink.png";
 import shape6purple from "../../assets/decoLib/shape6/purple.png";
 import shape6red from "../../assets/decoLib/shape6/red.png";
 import shape6skyblue from "../../assets/decoLib/shape6/sky-blue.png";
-import shape6white from "../../assets/decoLib/shape6/White.png";
+import shape6white from "../../assets/decoLib/shape6/white.png";
 import shape6yellow from "../../assets/decoLib/shape6/yellow.png";
 
 export default function Deco() {
