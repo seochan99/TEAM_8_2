@@ -18,6 +18,7 @@ export const Root = styled.div`
   flex-direction: column;
   align-items: center;
   color: black;
+  padding-bottom: 3rem;
 `;
 
 export const LogoImage = styled.img`

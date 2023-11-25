@@ -89,7 +89,19 @@ function PostBoxQuestion() {
 
         // 생성된 이미지와 함께 result page에 이동
 
-        navigate("/postbox/result");
+        navigate("/postbox/result", {
+          state: {
+            nickname: question[0].answer,
+            answerList: [
+              question[1].answer,
+              question[2].answer,
+              question[3].answer,
+              question[4].answer,
+              question[5].answer
+            ],
+            promptingText: promptingText
+          }
+        });
         // 결과 페이지로 이동
       }
     }
