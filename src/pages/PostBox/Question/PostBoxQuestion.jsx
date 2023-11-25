@@ -6,9 +6,10 @@ import CustomAlert from "../../../components/common/CustomAlert";
 import { useNavigate } from "react-router-dom";
 
 function PostBoxQuestion() {
-  const [questionSetep, setQuestionStep] = useState(5);
+  const [questionSetep, setQuestionStep] = useState(0);
   const [showAlert, setShowAlert] = useState(false);
   const [selectedMood, setSelectedMood] = useState("");
+  const [text, setText] = useState("");
 
   const handleMoodClick = mood => {
     setSelectedMood(mood);
@@ -55,22 +56,36 @@ function PostBoxQuestion() {
   const nextBtnHandler = () => {
     // 입력 안했다면
     if (question[questionSetep].answer === "") {
-      // 알림창 활성화
       setShowAlert(true);
-      // answer 비우기
+      return; // Return early to avoid proceeding further
     } else {
       // 입력창 비우기
-      setQuestion(questions =>
-        questions.map((q, index) =>
-          index === questionSetep ? { ...q, answer: "" } : q
-        )
-      );
+      // setQuestion(questions =>
+      //   questions.map((q, index) =>
+      //     index === questionSetep ? { ...q, answer: "" } : q
+      //   )
+      // );
+      setText("");
       // 그외에는 다음단계
       setQuestionStep(prev => prev + 1);
 
       // 마지막 단계에서는 결과 페이지 이동
       if (questionSetep === question.length - 1) {
-        // 결과물 이미지 생성하기
+        // 엽서 생성
+        const promptingText = `
+        ${question[1].answer}에서의 추억이 담긴 엽서. 날씨는 ${question[2].answer}이었고, ${question[3].answer} 하루를 보냈습니다. 
+        받는 사람을 생각하면 ${question[4].answer}의 기억이 떠오릅니다. 
+        엽서의 분위기는 ${question[5].answer}을 반영해야 합니다. 
+        width: 287px, height: 444px; 로 세로형으로 엽서 만들어줘
+        
+      `;
+
+        // This text can now be sent to the server or used as a prompt for image generation.
+        const content = {
+          nickname: question[0].answer,
+          content: promptingText
+        };
+        console.log(content);
 
         // 생성된 이미지와 함께 result page에 이동
 
@@ -123,9 +138,10 @@ function PostBoxQuestion() {
       ) : (
         <>
           <S.Input
-            value={question[questionSetep].answer}
+            value={text}
             placeholder={question[questionSetep].palceholderText}
             onChange={e => {
+              setText(e.target.value);
               setQuestion(questions =>
                 questions.map((q, index) =>
                   index === questionSetep ? { ...q, answer: e.target.value } : q
@@ -139,7 +155,7 @@ function PostBoxQuestion() {
       {/* ------------- 버튼 -------------*/}
       <QuestionBtnComponent
         colorCode={"#ffd84d"}
-        text={"다음"}
+        text={questionSetep === question.length - 1 ? "엽서 만들기" : "다음"}
         action={nextBtnHandler}
       />
 
