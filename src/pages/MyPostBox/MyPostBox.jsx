@@ -8,9 +8,11 @@ import CustomAlert from "../../components/common/CustomAlert";
 function MyPostBox() {
   const [showAlert, setShowAlert] = useState(false);
   const navigate = useNavigate();
+
   // location username=uuid 값을 가지고와서 변수에 저장
-  //   const location = useLocation();
-  //   const { username } = useParams();
+  const location = useLocation();
+  const { username } = useParams();
+
   const [userName, setUserName] = useState("chan");
 
   // const [isLoading, setIsLoading] = useState(true);
